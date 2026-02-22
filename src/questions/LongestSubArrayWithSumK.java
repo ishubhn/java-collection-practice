@@ -15,14 +15,14 @@ public class LongestSubArrayWithSumK {
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
 
-            int expected = sum - k;
+            int expectedSum = sum - k;
 
-            if (sumIndex.containsKey(expected)) {
-                int len = i - sumIndex.get(expected);
+            if (sumIndex.containsKey(expectedSum)) {
+                int len = i - sumIndex.get(expectedSum);
                 maxLen = Math.max(maxLen, len);
             }
 
-            if (!sumIndex.containsKey(expected)) {
+            if (!sumIndex.containsKey(expectedSum)) {
                 sumIndex.put(sum, i);
             }
         }
@@ -31,8 +31,8 @@ public class LongestSubArrayWithSumK {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, -2, 4};
-        int k = 6;
+        int[] arr = {11, 0, -3, 2, 4, -6};
+        int k = 8;
 
         System.out.println("Longest subarray with length: " + k + " is of length: " + longestSubarray(arr, k));
     }
