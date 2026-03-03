@@ -2,9 +2,9 @@ package collections.list.arraylist;
 
 import collections.util.PrintUtil;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ArrayListTest {
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class ArrayListTest {
         list.add(0, "Violet");
 
         // 4. Write a Java program to retrieve an element (at a specified index) from a given array list.
-        System.out.println("\nElement at '3' index: " + list.get(3));
+        System.out.println("Element at '3' index: " + list.get(3));
 
         // 5. Write a Java program to update an array element by the given element.
         list.set(2, "Black");
@@ -42,7 +42,7 @@ public class ArrayListTest {
 
         // 6. Write a Java program to remove the third element from an array list.
         list.remove(3);
-        System.out.println("\nupdated list post removal at index '3': " + list);
+        System.out.println("updated list post removal at index '3': " + list);
         PrintUtil.printLineSeparator();
 
         // 7. Write a Java program to search for an element in an array list.
@@ -78,16 +78,31 @@ public class ArrayListTest {
         PrintUtil.printLineSeparator();
 
         // 10. Write a Java program to shuffle elements in an array list.
-
+        Collections.shuffle(list);
+        System.out.println("list after shuffle : " + list);
 
         // 11. Write a Java program to reverse elements in an array list.
+        Collections.reverse(list);
+        System.out.println("list after reverse: " + list);
+
+        PrintUtil.printLineSeparator();
 
         // 12. Write a Java program to extract a portion of an array list.
+        System.out.println("Sub list between index 2-4: " + list.subList(2, 4));
+        PrintUtil.printLineSeparator();
 
         // 13. Write a Java program to compare two array lists.
+        System.out.println("Is list same as list2: " + list.equals(list2));
+        PrintUtil.printLineSeparator();
 
         // 14. Write a Java program that swaps two elements in an array list.
+        Collections.swap(list, 1, 3);
+        System.out.println("List post swapping element 1 with 3: " + list);
 
         // 15. Write a Java program to join two array lists.
+        List<String> newListColors = Arrays.asList("Indigo", "Blue", "Green", "Red");
+        // List<String> joinedList = Stream.concat(list.stream(), newListColors.stream()).toList();
+        List<String> joinedList = Stream.concat(list.stream(), newListColors.stream()).collect(Collectors.toList());
+        System.out.println("Merged list: " + joinedList);
     }
 }
