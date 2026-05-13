@@ -1,11 +1,9 @@
-package collections.list.linkedlist;
+package collections.old.list.linkedlist;
 
-import collections.util.PrintUtil;
+import collections.old.util.PrintUtil;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
-import java.util.List;
 
 public class LinkedList1 {
     public static void main(String[] args) {

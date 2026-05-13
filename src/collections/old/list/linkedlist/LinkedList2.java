@@ -1,6 +1,6 @@
-package collections.list.linkedlist;
+package collections.old.list.linkedlist;
 
-import collections.util.PrintUtil;
+import collections.old.util.PrintUtil;
 
 import java.util.*;
 import java.util.stream.Stream;

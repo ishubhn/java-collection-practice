@@ -1,10 +1,9 @@
-package collections.set.hashset;
+package collections.old.set.hashset;
 
-import collections.util.PrintUtil;
+import collections.old.util.PrintUtil;
 
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Set;
 import java.util.TreeSet;
 
 public class HashSetTest {

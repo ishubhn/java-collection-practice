@@ -1,6 +1,6 @@
-package collections.list.arraylist;
+package collections.old.list.arraylist;
 
-import collections.util.PrintUtil;
+import collections.old.util.PrintUtil;
 
 import java.util.*;
 import java.util.stream.Collectors;

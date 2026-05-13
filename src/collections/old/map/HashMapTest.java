@@ -1,6 +1,6 @@
-package collections.map;
+package collections.old.map;
 
-import collections.util.PrintUtil;
+import collections.old.util.PrintUtil;
 
 import java.util.HashMap;
 import java.util.Map;

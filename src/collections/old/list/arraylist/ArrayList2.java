@@ -1,9 +1,8 @@
-package collections.list.arraylist;
+package collections.old.list.arraylist;
 
-import collections.util.PrintUtil;
+import collections.old.util.PrintUtil;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ArrayList2 {

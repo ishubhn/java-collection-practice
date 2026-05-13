@@ -1,4 +1,4 @@
-package collections.util;
+package collections.old.util;
 
 public class PrintUtil {
     public static void printLineSeparator() {
